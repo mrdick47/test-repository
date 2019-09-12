@@ -1,0 +1,52 @@
+# See http://help.github.com/ignore-files/ for more about ignoring files.
+
+# permissions config dir
+/express-api/permissions/*
+
+# database files
+/mongo-database/db/*
+
+# compiled output
+/angular-app/dist
+/angular-app/tmp
+/angular-app/out-tsc
+
+# script generated files
+/tekweb.conf
+/tekweb-cron.log
+
+# node_modules
+**/node_modules
+
+# IDEs and editors
+/.idea
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+*.sublime-workspace
+
+# IDE - VSCode
+/.vscode/*
+
+# misc
+/angular-app/.sass-cache
+/angular-app/connect.lock
+/angular-app/coverage
+/angular-app/libpeerconnection.log
+/angular-app/npm-debug.log
+/angular-app/yarn-error.log
+/angular-app/testem.log
+/angular-app/tslint.json
+/angular-app/typings
+
+**/npm-debug.log
+**/yarn-error.log
+
+# System Files
+.DS_Store
+Thumbs.db
+
+#Never ignore .gitkeep files
+!/**/.gitkeep

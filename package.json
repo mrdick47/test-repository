@@ -1,0 +1,25 @@
+{
+  "name": "test-repository",
+  "version": "0.0.0",
+  "description": "test",
+  "main": "index.js",
+  "scripts": {
+    "release": "semantic-release -d --debug"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MrDick47/test-repository.git"
+  },
+  "author": "MrDick47",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MrDick47/test-repository/issues"
+  },
+  "homepage": "https://github.com/MrDick47/test-repository#readme",
+  "dependencies": {
+    "@semantic-release/changelog": "^3.0.4",
+    "@semantic-release/exec": "^3.3.6",
+    "@semantic-release/git": "^7.0.16",
+    "semantic-release": "^15.13.24"
+  }
+}

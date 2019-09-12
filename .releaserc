@@ -1,0 +1,52 @@
+{
+  "branch": "develop",
+  "branches": [
+      { "name": "develop", "channel": "rc", "prerelease": true }
+  ],
+  "ci": false,
+  "plugins": [
+    [
+      "@semantic-release/commit-analyzer",
+      {
+        "preset": "angular"
+      }
+    ],
+    [
+      "@semantic-release/release-notes-generator",
+      {
+        "preset": "angular"
+      }
+    ],
+    [
+      "@semantic-release/changelog",
+      {
+        "changelogFile": "CHANGELOG.md"
+      }
+    ],
+    [
+      "@semantic-release/exec",
+      {
+        "verifyConditionsCmd": "node ./release-hooks/verify-conditions.js",
+        "analyzeCommitsCmd": "node ./release-hooks/analyze-commits.js",
+        "verifyReleaseCmd": "node ./release-hooks/verify-release.js",
+        "generateNotesCmd": "node ./release-hooks/generate-notes.js",
+        "prepareCmd": "node ./release-hooks/prepare.js ${nextRelease.version}",
+        "publishCmd": "node ./release-hooks/publish.js",
+        "successCmd": "node ./release-hooks/success.js ${nextRelease.version}",
+        "failCmd": "node ./release-hooks/fail.js"
+      }
+    ],
+    [
+      "@semantic-release/npm",
+      {
+        "npmPublish": false
+      }
+    ],
+    [
+      "@semantic-release/git",
+      {
+        "message": "chore(release): ${nextRelease.version} [ci skip]"
+      }
+    ]
+  ]
+}
